@@ -1,0 +1,36 @@
+script          status  checks    external/structural notes
+------------------------------------------------------------
+lemma_1_1       PASS    7/7       0
+lemma_2_1       PASS    21/21     0
+lemma_2_2       PASS    4/4       1
+lemma_2_3       PASS    8/8       0
+lemma_2_4       PASS    54/54     0
+lemma_2_5       PASS    10/10     1
+lemma_2_6       PASS    6/6       0
+lemma_2_7       PASS    16/16     0
+lemma_3_1       PASS    4/4       0
+lemma_3_2       PASS    4/4       0
+lemma_3_3       PASS    7/7       0
+lemma_3_4       PASS    13/13     0
+lemma_3_5       PASS    4/4       0
+theorem_3_6     PASS    4/4       1
+lemma_4_1       PASS    4/4       0
+lemma_4_2       PASS    3/3       0
+lemma_4_3       PASS    5/5       1
+lemma_4_4       PASS    2/2       1
+lemma_4_5       PASS    7/7       0
+lemma_5_1       PASS    5/5       0
+lemma_5_2       PASS    5/5       0
+lemma_5_3       PASS    6/6       0
+lemma_5_4       PASS    5/5       0
+lemma_5_5       PASS    11/11     1
+lemma_5_6       PASS    16/16     0
+lemma_5_7       PASS    6/6       0
+lemma_A_1       PASS    5/5       0
+lemma_A_2       PASS    12/12     0
+lemma_A_3       PASS    3/3       0
+lemma_A_4       PASS    2/2       1
+lemma_A_5       PASS    2/2       0
+lemma_B_1       PASS    5/5       0
+------------------------------------------------------------
+32/32 scripts passed

@@ -1,0 +1,597 @@
+==============================================================================
+Lemma 1.1 (The wording 'involution')
+------------------------------------------------------------------------------
+On a space with a nonzero odd sector, a map satisfying T^2 = P is not an involution in the literal sense T^2 = I.
+------------------------------------------------------------------------------
+[PASS] T is antilinear with T^2 = P
+[PASS] T^2 != I
+[PASS] for an odd vector v, T^2 v = -v != v
+[PASS] P = I  <=>  odd dimension 0  (odd dim 0)
+[PASS] P = I  <=>  odd dimension 0  (odd dim 1)
+[PASS] P = I  <=>  odd dimension 0  (odd dim 2)
+[PASS] P = I  <=>  odd dimension 0  (odd dim 3)
+------------------------------------------------------------------------------
+Lemma 1.1 (The wording 'involution'): 7/7 checks passed
+
+==============================================================================
+Lemma 2.1 (Cohomology and the tautological class)
+------------------------------------------------------------------------------
+H*(RP^4;F2) = F2[a]/(a^5), deg a = 1, a = w1(gamma); a and a^2 are nonzero.
+------------------------------------------------------------------------------
+[PASS] integral cellular coboundaries are 0 or 2  ([0, 2, 0, 2])
+[PASS] all coboundaries vanish mod 2
+[PASS] dim H^k(RP^4;F2) = 1 for k = 0..4  ([1, 1, 1, 1, 1])
+[PASS] [g|...|g] (k=1) is a cycle mod 2
+[PASS] [g|...|g] (k=2) is a cycle mod 2
+[PASS] [g|...|g] (k=3) is a cycle mod 2
+[PASS] [g|...|g] (k=4) is a cycle mod 2
+[PASS] [g|...|g] (k=5) is a cycle mod 2
+[PASS] [g|...|g] (k=6) is a cycle mod 2
+[PASS] [g|...|g] (k=7) is a cycle mod 2
+[PASS] u^1 evaluates to 1 on the cycle [g|...|g], so u^1 is not a coboundary
+[PASS] u^2 evaluates to 1 on the cycle [g|...|g], so u^2 is not a coboundary
+[PASS] u^3 evaluates to 1 on the cycle [g|...|g], so u^3 is not a coboundary
+[PASS] u^4 evaluates to 1 on the cycle [g|...|g], so u^4 is not a coboundary
+[PASS] u^5 evaluates to 1 on the cycle [g|...|g], so u^5 is not a coboundary
+[PASS] u^6 evaluates to 1 on the cycle [g|...|g], so u^6 is not a coboundary
+[PASS] u^7 evaluates to 1 on the cycle [g|...|g], so u^7 is not a coboundary
+[PASS] the normalized bar complex has exactly one nondegenerate chain per degree
+[PASS] a^4 != 0 and a^5 = 0 in F2[a]/(a^5)
+[PASS] a != 0 and a^2 != 0
+[PASS] a continuous frame along the generator loop returns with sign -1 (non-trivial monodromy)
+------------------------------------------------------------------------------
+Lemma 2.1 (Cohomology and the tautological class): 21/21 checks passed
+
+==============================================================================
+Lemma 2.2 (Stable tangent bundle)
+------------------------------------------------------------------------------
+T RP^4 ⊕ ε ≅ 5γ as real vector bundles.
+
+Scope: Checked on the double cover S^4: the explicit bundle map is a fibrewise isomorphism and is Z/2-equivariant, so it descends to RP^4.
+------------------------------------------------------------------------------
+[PASS] Psi(t,s) = t + s x is a fibrewise isomorphism T_xS^4 ⊕ R -> R^5
+[PASS] Psi is equivariant: antipodal action -1 on T S^4, +1 on ε, -1 on R^5
+[PASS] rank Hom(γ,γ⊥) + rank Hom(γ,γ) = 4 + 1 = 5
+[NOTE] the quotient of S^4×R^5 by (x,v)~(-x,-v) is 5γ (each coordinate is a copy of γ)  (definition of γ as S^n ×_{Z/2} R with the sign action)
+[PASS] the normal coordinate s = <v,x> is invariant under (x,v)->(-x,-v): Hom(γ,γ) ≅ ε is trivial
+------------------------------------------------------------------------------
+Lemma 2.2 (Stable tangent bundle): 4/4 checks passed
+
+==============================================================================
+Lemma 2.3 (Characteristic-class calculation)
+------------------------------------------------------------------------------
+w(RP^4) = 1 + a + a^4; w1 = a, w2 = 0, w3 = 0, w4 = a^4.
+------------------------------------------------------------------------------
+[PASS] binomial coefficients of (1+a)^5 are 1,5,10,10,5,1
+[PASS] mod 2 they are 1,1,0,0,1,1
+[PASS] (1+a)^5 = 1 + a + a^4 in F2[a]/(a^5)  (1 + a + a^4)
+[PASS] w1 = a
+[PASS] w2 = 0
+[PASS] w3 = 0
+[PASS] w4 = a^4
+[PASS] consistency: w4[RP^4] = Euler characteristic mod 2 (= 1)  (chi = 1)
+------------------------------------------------------------------------------
+Lemma 2.3 (Characteristic-class calculation): 8/8 checks passed
+
+==============================================================================
+Lemma 2.4 (Why the two Pin obstructions differ)
+------------------------------------------------------------------------------
+E admits a Pin+ lift iff w2(E) = 0 and a Pin- lift iff w2(E) + w1(E)^2 = 0.
+
+Scope: Verifies the Clifford sign cocycle, its cocycle property, its identification with e2 + eps*e1^2 on (Z/2)^r, the reflection property of the e_i, and the symmetric-polynomial identities. The Čech/obstruction-theory step is standard and not simulated.
+------------------------------------------------------------------------------
+[PASS] Pin+, r=1: Clifford relations e_i e_j + e_j e_i = 2(±1)δ_ij
+[PASS] Pin+, r=1: s(g)s(h) = (-1)^c(g,h) s(g+h) with the stated c
+[PASS] Pin+, r=1: c is a 2-cocycle on (Z/2)^r
+[PASS] Pin+, r=1: c equals the cup cocycle of e2(x) + eps*e1(x)^2
+[PASS] Pin+, r=2: Clifford relations e_i e_j + e_j e_i = 2(±1)δ_ij
+[PASS] Pin+, r=2: s(g)s(h) = (-1)^c(g,h) s(g+h) with the stated c
+[PASS] Pin+, r=2: c is a 2-cocycle on (Z/2)^r
+[PASS] Pin+, r=2: c equals the cup cocycle of e2(x) + eps*e1(x)^2
+[PASS] Pin+, r=2: the class is non-zero (c is not a coboundary)
+[PASS] Pin+, r=3: Clifford relations e_i e_j + e_j e_i = 2(±1)δ_ij
+[PASS] Pin+, r=3: s(g)s(h) = (-1)^c(g,h) s(g+h) with the stated c
+[PASS] Pin+, r=3: c is a 2-cocycle on (Z/2)^r
+[PASS] Pin+, r=3: c equals the cup cocycle of e2(x) + eps*e1(x)^2
+[PASS] Pin+, r=3: the class is non-zero (c is not a coboundary)
+[PASS] Pin+, r=4: Clifford relations e_i e_j + e_j e_i = 2(±1)δ_ij
+[PASS] Pin+, r=4: s(g)s(h) = (-1)^c(g,h) s(g+h) with the stated c
+[PASS] Pin+, r=4: c is a 2-cocycle on (Z/2)^r
+[PASS] Pin+, r=4: c equals the cup cocycle of e2(x) + eps*e1(x)^2
+[PASS] Pin+, r=4: the class is non-zero (c is not a coboundary)
+[PASS] Pin+, r=5: Clifford relations e_i e_j + e_j e_i = 2(±1)δ_ij
+[PASS] Pin+, r=5: s(g)s(h) = (-1)^c(g,h) s(g+h) with the stated c
+[PASS] Pin+, r=5: c equals the cup cocycle of e2(x) + eps*e1(x)^2
+[PASS] Pin-, r=1: Clifford relations e_i e_j + e_j e_i = 2(±1)δ_ij
+[PASS] Pin-, r=1: s(g)s(h) = (-1)^c(g,h) s(g+h) with the stated c
+[PASS] Pin-, r=1: c is a 2-cocycle on (Z/2)^r
+[PASS] Pin-, r=1: c equals the cup cocycle of e2(x) + eps*e1(x)^2
+[PASS] Pin-, r=2: Clifford relations e_i e_j + e_j e_i = 2(±1)δ_ij
+[PASS] Pin-, r=2: s(g)s(h) = (-1)^c(g,h) s(g+h) with the stated c
+[PASS] Pin-, r=2: c is a 2-cocycle on (Z/2)^r
+[PASS] Pin-, r=2: c equals the cup cocycle of e2(x) + eps*e1(x)^2
+[PASS] Pin-, r=2: the class is non-zero (c is not a coboundary)
+[PASS] Pin-, r=3: Clifford relations e_i e_j + e_j e_i = 2(±1)δ_ij
+[PASS] Pin-, r=3: s(g)s(h) = (-1)^c(g,h) s(g+h) with the stated c
+[PASS] Pin-, r=3: c is a 2-cocycle on (Z/2)^r
+[PASS] Pin-, r=3: c equals the cup cocycle of e2(x) + eps*e1(x)^2
+[PASS] Pin-, r=3: the class is non-zero (c is not a coboundary)
+[PASS] Pin-, r=4: Clifford relations e_i e_j + e_j e_i = 2(±1)δ_ij
+[PASS] Pin-, r=4: s(g)s(h) = (-1)^c(g,h) s(g+h) with the stated c
+[PASS] Pin-, r=4: c is a 2-cocycle on (Z/2)^r
+[PASS] Pin-, r=4: c equals the cup cocycle of e2(x) + eps*e1(x)^2
+[PASS] Pin-, r=4: the class is non-zero (c is not a coboundary)
+[PASS] Pin-, r=5: Clifford relations e_i e_j + e_j e_i = 2(±1)δ_ij
+[PASS] Pin-, r=5: s(g)s(h) = (-1)^c(g,h) s(g+h) with the stated c
+[PASS] Pin-, r=5: c equals the cup cocycle of e2(x) + eps*e1(x)^2
+[PASS] e_i^2 = +1: twisted adjoint of e_i is the reflection in e_i^⊥
+[PASS] e_i^2 = -1: twisted adjoint of e_i is the reflection in e_i^⊥
+[PASS] r=2: degree-2 part of Π(1+x_i) is e2 = Σ_(i>j) x_i x_j
+[PASS] r=2: (Σ x_i)^2 = Σ x_i^2 over F2
+[PASS] r=3: degree-2 part of Π(1+x_i) is e2 = Σ_(i>j) x_i x_j
+[PASS] r=3: (Σ x_i)^2 = Σ x_i^2 over F2
+[PASS] r=4: degree-2 part of Π(1+x_i) is e2 = Σ_(i>j) x_i x_j
+[PASS] r=4: (Σ x_i)^2 = Σ x_i^2 over F2
+[PASS] r=5: degree-2 part of Π(1+x_i) is e2 = Σ_(i>j) x_i x_j
+[PASS] r=5: (Σ x_i)^2 = Σ x_i^2 over F2
+------------------------------------------------------------------------------
+Lemma 2.4 (Why the two Pin obstructions differ): 54/54 checks passed
+
+==============================================================================
+Lemma 2.5 (All three conclusions of Exercise 9)
+------------------------------------------------------------------------------
+RP^4 is non-orientable, admits Pin+ structures, and admits no Pin- structure.
+
+Scope: Two independent routes: (A) characteristic classes; (B) the flat bundle 5γ = TRP^4 ⊕ ε has holonomy -I_5 around the generator of π1 = Z/2, so a Pin± structure on it is a lift of -I_5 to an element of order 2 in Pin±(5). Pin structures are stable under adding ε.
+------------------------------------------------------------------------------
+[PASS] (A) w1 = a != 0  => non-orientable
+[PASS] (A) w2 = 0  => Pin+ exists
+[PASS] (A) w2 + w1^2 = a^2 != 0  => no Pin-
+[PASS] (B) det(-I_5) = -1 => orientation character non-trivial
+[PASS] (B) Pin+: lift s = e1...e5 satisfies s^2 = +1 -> homomorphism Z/2 -> Pin+(5) exists
+[PASS] (B) Pin+: pulled-back extension class on Z/2 is c(δ,δ) = 0
+[PASS] (B) Pin+: that class is zero in H^2(Z/2;F2)
+[PASS] (B) Pin-: both lifts ±e1...e5 square to -1 -> no lift of the holonomy
+[PASS] (B) Pin-: pulled-back extension class on Z/2 is c(δ,δ) = 1
+[PASS] (B) Pin-: that class is non-zero in H^2(Z/2;F2)
+[NOTE] (B) H^2(BZ/2;F2) -> H^2(RP^4;F2) is an isomorphism (RP^4 is the 4-skeleton of RP^∞)  (cellular: both have one 2-cell and zero mod-2 coboundaries (see Lemma 2.1))
+------------------------------------------------------------------------------
+Lemma 2.5 (All three conclusions of Exercise 9): 10/10 checks passed
+
+==============================================================================
+Lemma 2.6 (Number of Pin+ structures)
+------------------------------------------------------------------------------
+There are precisely two isomorphism classes of Pin+ lifts of T RP^4.
+
+Scope: Count via the H^1-torsor and, independently, via lifts of the holonomy of the flat bundle 5γ.
+------------------------------------------------------------------------------
+[PASS] |H^1(RP^4;F2)| = 2
+[PASS] both ±e1...e5 are order-2 lifts of -I_5 in Pin+(5)
+[PASS] the two lifts are distinct
+[PASS] conjugation by the central kernel {±1} cannot identify s with -s
+[PASS] the two lifts differ by the non-trivial character Z/2 -> {±1} (the H^1 action)
+[PASS] torsor count = |Hom(Z/2, {±1})| = 2 = number of lifts
+------------------------------------------------------------------------------
+Lemma 2.6 (Number of Pin+ structures): 6/6 checks passed
+
+==============================================================================
+Lemma 2.7 (The same conclusions for any homotopy RP^4)
+------------------------------------------------------------------------------
+If M is a closed smooth 4-manifold homotopy equivalent to RP^4, then w(TM) = 1 + a + a^4; M is non-orientable, has no Pin- structure and exactly two Pin+ structures.
+
+Scope: Computes w from Wu's formula using only the cohomology ring and Steenrod squares - homotopy-invariant data - so the result applies verbatim to the Cappell-Shaneson RP^4. The Wu implementation is cross-checked against w(RP^n) = (1+a)^(n+1) for n = 1..10.
+------------------------------------------------------------------------------
+[PASS] Wu-formula SW class equals (1+a)^2 for RP^1  (1)
+[PASS] Wu-formula SW class equals (1+a)^3 for RP^2  (1 + a + a^2)
+[PASS] Wu-formula SW class equals (1+a)^4 for RP^3  (1)
+[PASS] Wu-formula SW class equals (1+a)^5 for RP^4  (1 + a + a^4)
+[PASS] Wu-formula SW class equals (1+a)^6 for RP^5  (1 + a^2 + a^4)
+[PASS] Wu-formula SW class equals (1+a)^7 for RP^6  (1 + a + a^2 + a^3 + a^4 + a^5 + a^6)
+[PASS] Wu-formula SW class equals (1+a)^8 for RP^7  (1)
+[PASS] Wu-formula SW class equals (1+a)^9 for RP^8  (1 + a + a^8)
+[PASS] Wu-formula SW class equals (1+a)^10 for RP^9  (1 + a^2 + a^8)
+[PASS] Wu-formula SW class equals (1+a)^11 for RP^10  (1 + a + a^2 + a^3 + a^8 + a^9 + a^10)
+[PASS] Wu class of a homotopy RP^4 is v = 1 + a + a^2  (1 + a + a^2)
+[PASS] w(TM) = Sq(v) = 1 + a + a^4  (1 + a + a^4)
+[PASS] w1(M) = a != 0  => M non-orientable
+[PASS] w2(M) = 0  => Pin+ exists
+[PASS] w2(M) + w1(M)^2 = a^2 != 0  => no Pin-
+[PASS] |H^1(M;F2)| = |H^1(RP^4;F2)| = 2  => exactly two Pin+ structures
+------------------------------------------------------------------------------
+Lemma 2.7 (The same conclusions for any homotopy RP^4): 16/16 checks passed
+
+==============================================================================
+Lemma 3.1 (An explicit finite character)
+------------------------------------------------------------------------------
+With ζ = e^{2πi/16}, χ(k) = ζ^k is a well-defined injective homomorphism Z/16 -> C^×.
+------------------------------------------------------------------------------
+[PASS] well-defined: χ(k + 16m) = χ(k) for k in 0..15, m in -3..3
+[PASS] multiplicative: χ(k + l) = χ(k)χ(l) for all k, l
+[PASS] kernel is {0}: χ(k) = 1 iff 16 | k
+[PASS] ζ is a primitive 16th root of unity
+------------------------------------------------------------------------------
+Lemma 3.1 (An explicit finite character): 4/4 checks passed
+
+==============================================================================
+Lemma 3.2 (The closed-manifold invariant)
+------------------------------------------------------------------------------
+I(M,p) = χ([M,p]) is a diffeomorphism invariant, multiplicative under disjoint union, and trivial on Pin+ boundaries.
+
+Scope: Input B (Ω4^Pin+ ≅ Z/16; RP^4 ↦ ±1, Cappell-Shaneson RP^4 ↦ ±9; homeomorphism) is taken from the literature and is NOT validated by this script. Bordism is modelled abstractly as Z/16.
+------------------------------------------------------------------------------
+[PASS] disjoint union = addition of classes -> I(M ⊔ N) = I(M) I(N) for all classes
+[PASS] a Pin+ boundary has class 0 and I = 1
+[PASS] structured diffeomorphic manifolds have equal classes, hence equal I (by definition)
+[PASS] orientation-type reversal of structure (class -k) gives the conjugate value
+------------------------------------------------------------------------------
+Lemma 3.2 (The closed-manifold invariant): 4/4 checks passed
+
+==============================================================================
+Lemma 3.3 (Separation independent of labelling)
+------------------------------------------------------------------------------
+No choice of Pin+ structure on R gives the same value of I as any choice on Q.
+
+Scope: Input B (Ω4^Pin+ ≅ Z/16; RP^4 ↦ ±1, Cappell-Shaneson RP^4 ↦ ±9; homeomorphism) is taken from the literature and is NOT validated by this script.
+------------------------------------------------------------------------------
+[PASS] exponent sets are {1,15} and {7,9}
+[PASS] they are disjoint
+[PASS] value sets {ζ, ζ^-1} and {ζ^9, ζ^-9} are disjoint
+[PASS] disjoint under every automorphism of Z/16 (u odd)
+[PASS] disjoint for every injective character χ^u (u odd)
+[PASS] control: exactly the even u (characters killing 8) fail to separate  (failing u = [0, 2, 4, 6, 8, 10, 12, 14])
+[PASS] all 4 pairings (p on R, q on Q) give different values
+------------------------------------------------------------------------------
+Lemma 3.3 (Separation independent of labelling): 7/7 checks passed
+
+==============================================================================
+Lemma 3.4 (A real unstructured numerical separation)
+------------------------------------------------------------------------------
+A(R) = cos(π/8), A(Q) = -cos(π/8); for any identification/injective character the values are ±cos(πu/8), u odd, and are unequal.
+
+Scope: Input B (Ω4^Pin+ ≅ Z/16; RP^4 ↦ ±1, Cappell-Shaneson RP^4 ↦ ±9; homeomorphism) is taken from the literature and is NOT validated by this script.
+------------------------------------------------------------------------------
+[PASS] A(R) = cos(π/8) (real)
+[PASS] A(Q) = -cos(π/8) (real)
+[PASS] ζ^9 = -ζ and ζ^-9 = -ζ^-1
+[PASS] cos(π/8) > 0
+[PASS] u=1: A(R)=cos(πu/8), A(Q)=-A(R), and A(R) != 0
+[PASS] u=3: A(R)=cos(πu/8), A(Q)=-A(R), and A(R) != 0
+[PASS] u=5: A(R)=cos(πu/8), A(Q)=-A(R), and A(R) != 0
+[PASS] u=7: A(R)=cos(πu/8), A(Q)=-A(R), and A(R) != 0
+[PASS] u=9: A(R)=cos(πu/8), A(Q)=-A(R), and A(R) != 0
+[PASS] u=11: A(R)=cos(πu/8), A(Q)=-A(R), and A(R) != 0
+[PASS] u=13: A(R)=cos(πu/8), A(Q)=-A(R), and A(R) != 0
+[PASS] u=15: A(R)=cos(πu/8), A(Q)=-A(R), and A(R) != 0
+[PASS] independent of labelling: permuting the two lifts leaves the sums fixed
+------------------------------------------------------------------------------
+Lemma 3.4 (A real unstructured numerical separation): 13/13 checks passed
+
+==============================================================================
+Lemma 3.5 (Functorial extension, with dependency exposed)
+------------------------------------------------------------------------------
+Using Inputs B and E, I is the closed-manifold partition function of an invertible 4D Pin+ super TQFT.
+
+Scope: Input B (Ω4^Pin+ ≅ Z/16; RP^4 ↦ ±1, Cappell-Shaneson RP^4 ↦ ±9; homeomorphism) is taken from the literature and is NOT validated by this script. Input E (Reutter-Schommer-Pries, Thm 3.14) is also external. This script checks only the algebraic layer: any homomorphism s from a finitely generated abelian group to Z/16, composed with χ, is a character, and its values are the χ-values of the image classes.
+------------------------------------------------------------------------------
+[PASS] ω = χ ∘ s is a homomorphism to C^× (well-defined on torsion)
+[PASS] closed values Z_ω(M,p) = χ([M,p]_Pin+) = I(M,p)
+[PASS] Hom(Z/16, C^×) is cyclic of order 16 and χ is a generator
+[PASS] partition functions of an invertible theory lie in the unit circle (super lines)
+------------------------------------------------------------------------------
+Lemma 3.5 (Functorial extension, with dependency exposed): 4/4 checks passed
+
+==============================================================================
+Theorem 3.6 (Pin+ detection as a consequence of established results)
+------------------------------------------------------------------------------
+There is an invertible 4D Pin+ super TQFT whose closed values distinguish RP^4 from the Cappell-Shaneson RP^4 for every pairing of Pin+ structures; its closed values are 16th roots of unity.
+
+Scope: Input B (Ω4^Pin+ ≅ Z/16; RP^4 ↦ ±1, Cappell-Shaneson RP^4 ↦ ±9; homeomorphism) is taken from the literature and is NOT validated by this script. Input E (existence of the functor) is external; the categorical/time-reversal clauses of Problem 5 are explicitly NOT claimed.
+------------------------------------------------------------------------------
+[PASS] Lemma 2.6/2.7: each manifold has exactly two Pin+ structures
+[PASS] Lemma 3.3: all 4 pairings separated  ([(1, 7), (1, 9), (15, 7), (15, 9)])
+[PASS] Lemma 3.1: closed values lie in μ16
+[PASS] the separating values are not all equal to 1 (the theory is non-trivial)
+[NOTE] homeomorphism of R and Q  (Input B(i) - Hambleton-Kreck-Teichner; external, not validated)
+------------------------------------------------------------------------------
+Theorem 3.6 (Pin+ detection as a consequence of established results): 4/4 checks passed
+
+==============================================================================
+Lemma 4.1 (An oriented obstruction cannot be applied unchanged)
+------------------------------------------------------------------------------
+A theorem quantified over oriented 4-manifolds does not, without further argument, rule out detection of the pair R, Q.
+------------------------------------------------------------------------------
+[PASS] R is non-orientable (w1 = a != 0)
+[PASS] Q is non-orientable (w1 is a homotopy invariant, Lemma 2.7)
+[PASS] the pair lies outside the hypothesis 'oriented' of the obstruction theorem
+[PASS] orientation character of RP^4: det(-I_5)/det(+1) = -1
+------------------------------------------------------------------------------
+Lemma 4.1 (An oriented obstruction cannot be applied unchanged): 4/4 checks passed
+
+==============================================================================
+Lemma 4.2 (What the Pin+ obstruction does not show)
+------------------------------------------------------------------------------
+w2 = 0 and w2 + w1^2 != 0 do not construct a TQFT or certify its finite categorical origin.
+
+Scope: Illustrative: the same obstruction data is compatible with 16 different invertible theories χ^u, which differ on RP^4 and include the trivial one. Input B (Ω4^Pin+ ≅ Z/16; RP^4 ↦ ±1, Cappell-Shaneson RP^4 ↦ ±9; homeomorphism) is taken from the literature and is NOT validated by this script.
+------------------------------------------------------------------------------
+[PASS] 16 pairwise different character theories share the same Pin+ admissibility data
+[PASS] the trivial theory (u = 0) is among them and does not separate R from Q
+[PASS] so (w1, w2) alone cannot determine the theory's values on RP^4
+------------------------------------------------------------------------------
+Lemma 4.2 (What the Pin+ obstruction does not show): 3/3 checks passed
+
+==============================================================================
+Lemma 4.3 (Three meanings of finiteness)
+------------------------------------------------------------------------------
+Finite image of closed partition functions and finite-dimensional state spaces do not, by definition alone, verify a finite local categorical presentation.
+
+Scope: Illustrative: every character χ^u has finite image and 1-dimensional state spaces, so these two properties cannot distinguish theories with and without a presentation; a presentation is extra data that no scalar computation supplies. Not a theorem-proving script.
+------------------------------------------------------------------------------
+[PASS] χ^1: finite image of size 16 (divides 16)
+[PASS] χ^2: finite image of size 8 (divides 16)
+[PASS] χ^3: finite image of size 16 (divides 16)
+[PASS] χ^8: finite image of size 2 (divides 16)
+[NOTE] invertible theories have 1-dimensional (super-line) state spaces in every case  (structural property of invertible theories, not computed)
+[PASS] the two properties hold uniformly in u, so they carry no information about a local presentation
+------------------------------------------------------------------------------
+Lemma 4.3 (Three meanings of finiteness): 5/5 checks passed
+
+==============================================================================
+Lemma 4.4 (A scalar conjugation check is insufficient)
+------------------------------------------------------------------------------
+For k in Z/16, conj(χ(k)) = χ(-k); this alone does not define T on state spaces.
+------------------------------------------------------------------------------
+[PASS] conj(χ(k)) = χ(-k) for all k
+[PASS] conjugation sends the theory χ to the different theory χ^-1 = χ^15
+[NOTE] the identity involves only closed 4-manifold values (no 3-manifold state-space data)  (structural observation)
+------------------------------------------------------------------------------
+Lemma 4.4 (A scalar conjugation check is insufficient): 2/2 checks passed
+
+==============================================================================
+Lemma 4.5 (The theory of Theorem 3.6 cannot see homotopy 4-spheres)
+------------------------------------------------------------------------------
+A smooth homotopy 4-sphere Σ has a unique Pin+ structure and Z_ω(Σ) = 1 = Z_ω(S^4).
+
+Scope: Uses Rokhlin's theorem / Ω4^Spin ≅ Z via σ/16 (external). Checks the cohomological and arithmetic steps.
+------------------------------------------------------------------------------
+[PASS] Wu classes v1 = v2 = 0 (H^3 = H^2 = 0)
+[PASS] w1(Σ) = w2(Σ) = 0 => orientable, spin and Pin+
+[PASS] number of Pin+ structures = |H^1(Σ;F2)| = 1
+[PASS] signature of Σ is 0 (empty intersection form)
+[PASS] Rokhlin consistency: K3 has σ = -16, Â = -p1/24 = 2 (integer, even)
+[PASS] [Σ] = σ/16 · [K3] = 0 in Ω4^Spin, hence 0 in Ω4^Pin+
+[PASS] Z_ω(Σ) = χ(0) = 1 = Z_ω(S^4)
+------------------------------------------------------------------------------
+Lemma 4.5 (The theory of Theorem 3.6 cannot see homotopy 4-spheres): 7/7 checks passed
+
+==============================================================================
+Lemma 5.1 (Square and conjugation formula)
+------------------------------------------------------------------------------
+J1^2 = -I, and J1 M J1^{-1} = Y conj(M) Y for every complex 2x2 matrix M.
+------------------------------------------------------------------------------
+[PASS] conj(Y) = -Y and Y^2 = I
+[PASS] J1^2 = Y conj(Y) = -I
+[PASS] (YK)^{-1} = KY = -YK
+[PASS] J1 M J1^{-1} = Y conj(M) Y for 500 random M
+[PASS] antilinearity: J1(i v) = -i J1(v)
+------------------------------------------------------------------------------
+Lemma 5.1 (Square and conjugation formula): 5/5 checks passed
+
+==============================================================================
+Lemma 5.2 (Fixed matrices)
+------------------------------------------------------------------------------
+The complex 2x2 matrices commuting with J1 are exactly [[α, -β̄],[β, ᾱ]].
+------------------------------------------------------------------------------
+[PASS] the commutant has real dimension 4 (= dim H)
+[PASS] Y conj(M) Y = [[d̄, -c̄],[-b̄, ā]]
+[PASS] every matrix of the stated form commutes with J1
+[PASS] the stated form spans the full 4-dim commutant
+[PASS] control: a random matrix does not commute with J1
+------------------------------------------------------------------------------
+Lemma 5.2 (Fixed matrices): 5/5 checks passed
+
+==============================================================================
+Lemma 5.3 (A real algebra homomorphism)
+------------------------------------------------------------------------------
+Φ(a⊗b)(x) = a x b̄ defines a unital real algebra homomorphism H ⊗_R H -> End_R(H).
+------------------------------------------------------------------------------
+[PASS] Hamilton relations: i^2 = j^2 = k^2 = ijk = -1
+[PASS] Φ(1⊗1) = id
+[PASS] Φ(ac⊗bd) = Φ(a⊗b)Φ(c⊗d) on all 256 basis quadruples
+[PASS] multiplicativity on 200 random quadruples
+[PASS] conj(bd) = conj(d) conj(b)
+[PASS] real bilinearity in a and b
+------------------------------------------------------------------------------
+Lemma 5.3 (A real algebra homomorphism): 6/6 checks passed
+
+==============================================================================
+Lemma 5.4 (Injectivity and surjectivity)
+------------------------------------------------------------------------------
+Φ is an isomorphism; H ⊗_R H ≅ M4(R).
+------------------------------------------------------------------------------
+[PASS] tr(L_u R_v) = 4 Re(u) Re(v) for all basis pairs
+[PASS] adjoints: L_a^* = L_ā, R_a^* = R_ā
+[PASS] Gram matrix tr(Φ(a⊗b)^*Φ(c⊗d)) = 4 δ_ac δ_bd
+[PASS] the 16 images are linearly independent (rank 16)
+[PASS] dim_R(H⊗H) = 16 = dim_R M4(R)
+------------------------------------------------------------------------------
+Lemma 5.4 (Injectivity and surjectivity): 5/5 checks passed
+
+==============================================================================
+Lemma 5.5 (Brauer order and tensor parity)
+------------------------------------------------------------------------------
+[H] has order two in Br(R), and Jn = Y^{⊗n} K satisfies Jn^2 = (-1)^n I.
+------------------------------------------------------------------------------
+[PASS] H has no zero divisors (|pq| = |p||q|), so H is not split (H ≇ M2(R))
+[PASS] control: M2(R) has a non-zero nilpotent (zero divisor)
+[NOTE] [H]^2 = [M4(R)] = [R] (Lemma 5.4), so the order is exactly 2  (from Lemma 5.4)
+[PASS] n=1: conj(Y^⊗n) = (-1)^n Y^⊗n and Jn^2 = (-1)^n I
+[PASS] n=2: conj(Y^⊗n) = (-1)^n Y^⊗n and Jn^2 = (-1)^n I
+[PASS] n=3: conj(Y^⊗n) = (-1)^n Y^⊗n and Jn^2 = (-1)^n I
+[PASS] n=4: conj(Y^⊗n) = (-1)^n Y^⊗n and Jn^2 = (-1)^n I
+[PASS] n=5: conj(Y^⊗n) = (-1)^n Y^⊗n and Jn^2 = (-1)^n I
+[PASS] n=6: conj(Y^⊗n) = (-1)^n Y^⊗n and Jn^2 = (-1)^n I
+[PASS] n=1: the real algebra commuting with Jn has dimension 4^n = 4
+[PASS] n=2: the real algebra commuting with Jn has dimension 4^n = 16
+[PASS] n=3: the real algebra commuting with Jn has dimension 4^n = 64
+------------------------------------------------------------------------------
+Lemma 5.5 (Brauer order and tensor parity): 11/11 checks passed
+
+==============================================================================
+Lemma 5.6 (Kramers degeneracy)
+------------------------------------------------------------------------------
+If H = H^* commutes with an antiunitary J with J^2 = -I, every eigenspace has even dimension.
+------------------------------------------------------------------------------
+[PASS] n=1: J^2 = -I
+[PASS] n=1: H is Hermitian and commutes with J
+[PASS] n=1: every eigenvalue has even multiplicity  (multiplicities [2]...)
+[PASS] n=1: <Jv, v> = 0 and HJv = E Jv for a ground vector
+[PASS] n=1: antiunitarity <Jx,Jy> = <y,x>
+[PASS] n=3: J^2 = -I
+[PASS] n=3: H is Hermitian and commutes with J
+[PASS] n=3: every eigenvalue has even multiplicity  (multiplicities [2, 2, 2, 2]...)
+[PASS] n=3: <Jv, v> = 0 and HJv = E Jv for a ground vector
+[PASS] n=3: antiunitarity <Jx,Jy> = <y,x>
+[PASS] n=5: J^2 = -I
+[PASS] n=5: H is Hermitian and commutes with J
+[PASS] n=5: every eigenvalue has even multiplicity  (multiplicities [2, 2, 2, 2, 2, 2]...)
+[PASS] n=5: <Jv, v> = 0 and HJv = E Jv for a ground vector
+[PASS] n=5: antiunitarity <Jx,Jy> = <y,x>
+[PASS] control n=2 (J^2 = +I): spectrum is generically non-degenerate
+------------------------------------------------------------------------------
+Lemma 5.6 (Kramers degeneracy): 16/16 checks passed
+
+==============================================================================
+Lemma 5.7 (Which energy gap is meaningful)
+------------------------------------------------------------------------------
+For odd n, a J_n-symmetric H has a degenerate ground space; the gap above the ground multiplet is min{E - E0 : E in spec(H), E > E0}.
+------------------------------------------------------------------------------
+[PASS] n=1: naive E1 - E0 = 0 (degenerate ground space)
+[PASS] n=1: H is scalar (one Kramers pair), so no excited eigenvalue exists - the lemma's hypothesis 'if an excited eigenvalue exists' is genuinely needed
+[PASS] n=3: naive E1 - E0 = 0 (degenerate ground space)
+[PASS] n=3: multiplet gap = min{E - E0 : E > E0} > 0  (gap = 1.0867)
+[PASS] n=5: naive E1 - E0 = 0 (degenerate ground space)
+[PASS] n=5: multiplet gap = min{E - E0 : E > E0} > 0  (gap = 1.5465)
+------------------------------------------------------------------------------
+Lemma 5.7 (Which energy gap is meaningful): 6/6 checks passed
+
+==============================================================================
+Lemma A.1 (The exercise selects the positive Pin sign)
+------------------------------------------------------------------------------
+RP^4 (and, by Lemma 2.7, the Cappell-Shaneson RP^4) can be evaluated by a Pin+ theory and not by a Pin--only theory. Among Pin± theories, the test must use Pin+.
+------------------------------------------------------------------------------
+[PASS] RP^4: admissible for Pin+
+[PASS] RP^4: not admissible for Pin-
+[PASS] Cappell-Shaneson RP^4: admissible for Pin+
+[PASS] Cappell-Shaneson RP^4: not admissible for Pin-
+[PASS] among {Pin+, Pin-}, only Pin+ admits both manifolds
+------------------------------------------------------------------------------
+Lemma A.1 (The exercise selects the positive Pin sign): 5/5 checks passed
+
+==============================================================================
+Lemma A.2 (The symmetry motivation is compatible at the level of signs)
+------------------------------------------------------------------------------
+If T is antilinear with T^2 = P, then T preserves the grading, T^2 = I on the even sector and T^2 = -I on the odd sector, where i and T generate a quaternion action.
+------------------------------------------------------------------------------
+[PASS] T^2 = P
+[PASS] TP = PT
+[PASS] T maps even vectors to even vectors
+[PASS] T maps odd vectors to odd vectors
+[PASS] T^2 = +I on the even sector
+[PASS] T^2 = -I on the odd sector
+[PASS] odd sector: T i = -i T
+[PASS] odd sector: (iT)^2 = -I
+[PASS] odd sector: with I = i, J = T, K = iT:  J·K = I  (T(iT) = -i T^2 = i)
+[PASS] odd sector: K·I = J  ((iT) i = T)
+[PASS] odd sector: I^2 = J^2 = K^2 = -1
+[PASS] odd-sector dimension is even (quaternionic)
+------------------------------------------------------------------------------
+Lemma A.2 (The symmetry motivation is compatible at the level of signs): 12/12 checks passed
+
+==============================================================================
+Lemma A.3 (Adding an exotic test pair is an extra input)
+------------------------------------------------------------------------------
+Exercise 9 alone does not assert existence of an exotic partner for RP^4; Input B supplies it.
+
+Scope: Shows that every quantity Exercise 9 computes is homotopy invariant and identical for R and Q, so the exercise cannot produce or separate Q. Input B (Ω4^Pin+ ≅ Z/16; RP^4 ↦ ±1, Cappell-Shaneson RP^4 ↦ ±9; homeomorphism) is taken from the literature and is NOT validated by this script.
+------------------------------------------------------------------------------
+[PASS] total SW classes of R and Q agree  (1 + a + a^4)
+[PASS] Exercise 9 outputs (orientable?, Pin+?, Pin-?) agree for R and Q
+[PASS] the separating information (±1 vs ±9) comes only from Input B
+------------------------------------------------------------------------------
+Lemma A.3 (Adding an exotic test pair is an extra input): 3/3 checks passed
+
+==============================================================================
+Lemma A.4 (From a test object to an existence question)
+------------------------------------------------------------------------------
+The exercise, the symmetry sign and an exotic pair motivate, but do not prove, the existence assertion.
+
+Scope: Illustrative: the three ingredients are all compatible with theories that separate R and Q and with theories that do not, so they cannot by themselves force existence. Input B (Ω4^Pin+ ≅ Z/16; RP^4 ↦ ±1, Cappell-Shaneson RP^4 ↦ ±9; homeomorphism) is taken from the literature and is NOT validated by this script.
+------------------------------------------------------------------------------
+[PASS] a separating Pin+ character exists (u = 1)
+[PASS] non-separating Pin+ characters also exist (u = 0, 2)
+[NOTE] so the ingredients identify what to search for; a witness (Input E + Lemma 3.3) is extra
+------------------------------------------------------------------------------
+Lemma A.4 (From a test object to an existence question): 2/2 checks passed
+
+==============================================================================
+Lemma A.5 (The finite numerical genesis script cannot close the gap)
+------------------------------------------------------------------------------
+Agreement of a chosen finite list of invariants on an exotic pair does not prove agreement for every TQFT in Problem 5.
+
+Scope: Builds a finite list of homotopy-invariant quantities (Euler characteristic, all SW numbers, Pin± admissibility, untwisted Dijkgraaf-Witten counts |Hom(π1,G)|/|G| for four finite groups) that agree on R and Q, then exhibits the Pin+ bordism character that does not. Input B (Ω4^Pin+ ≅ Z/16; RP^4 ↦ ±1, Cappell-Shaneson RP^4 ↦ ±9; homeomorphism) is taken from the literature and is NOT validated by this script.
+------------------------------------------------------------------------------
+[PASS] all 11 listed invariants agree on R and Q  (euler=1, w1^4=1, w1^2 w2=0, w2^2=0, w1 w3=0, w4=1, DW[Z/2]=1.0, DW[Z/3]=0.3333333333333333, DW[Z/4]=0.5, DW[S3]=0.6666666666666666, Pin+ admissible=True)
+[PASS] yet the Pin+ bordism character separates them (Lemma 3.3)
+------------------------------------------------------------------------------
+Lemma A.5 (The finite numerical genesis script cannot close the gap): 2/2 checks passed
+
+==============================================================================
+Lemma B.1 (Internal arithmetic checks)
+------------------------------------------------------------------------------
+The characteristic-class expansion, the exponent comparison and the averaged detector are consistent.
+------------------------------------------------------------------------------
+[PASS] binomial coefficients of (1+a)^5 mod 2 are (1,1,0,0,1,1)
+[PASS] -1 ≡ 15 and -9 ≡ 7 (mod 16)
+[PASS] neither 7 nor 9 equals 1 or 15
+[PASS] adding 8 to an exponent multiplies the root of unity by -1
+[PASS] hence A(Q) = -A(R)
+------------------------------------------------------------------------------
+Lemma B.1 (Internal arithmetic checks): 5/5 checks passed
+
+script          status  checks    external/structural notes
+------------------------------------------------------------
+lemma_1_1       PASS    7/7       0
+lemma_2_1       PASS    21/21     0
+lemma_2_2       PASS    4/4       1
+lemma_2_3       PASS    8/8       0
+lemma_2_4       PASS    54/54     0
+lemma_2_5       PASS    10/10     1
+lemma_2_6       PASS    6/6       0
+lemma_2_7       PASS    16/16     0
+lemma_3_1       PASS    4/4       0
+lemma_3_2       PASS    4/4       0
+lemma_3_3       PASS    7/7       0
+lemma_3_4       PASS    13/13     0
+lemma_3_5       PASS    4/4       0
+theorem_3_6     PASS    4/4       1
+lemma_4_1       PASS    4/4       0
+lemma_4_2       PASS    3/3       0
+lemma_4_3       PASS    5/5       1
+lemma_4_4       PASS    2/2       1
+lemma_4_5       PASS    7/7       0
+lemma_5_1       PASS    5/5       0
+lemma_5_2       PASS    5/5       0
+lemma_5_3       PASS    6/6       0
+lemma_5_4       PASS    5/5       0
+lemma_5_5       PASS    11/11     1
+lemma_5_6       PASS    16/16     0
+lemma_5_7       PASS    6/6       0
+lemma_A_1       PASS    5/5       0
+lemma_A_2       PASS    12/12     0
+lemma_A_3       PASS    3/3       0
+lemma_A_4       PASS    2/2       1
+lemma_A_5       PASS    2/2       0
+lemma_B_1       PASS    5/5       0
+------------------------------------------------------------
+32/32 scripts passed
